@@ -2,8 +2,8 @@ import os
 from eve import Eve
 from eve.auth import BasicAuth
 
-ADMIN_USERNAME    = os.environ['ADMIN_USERNAME']
-ADMIN_PASSWORD    = os.environ['ADMIN_PASSWORD']
+ADMIN_USERNAME = os.environ['ADMIN_USERNAME']
+ADMIN_PASSWORD = os.environ['ADMIN_PASSWORD']
 
 profile_schema = {
     'username': { 'type': 'string' },
