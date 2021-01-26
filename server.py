@@ -2,13 +2,6 @@ import os
 from eve import Eve
 from eve.auth import BasicAuth
 
-MONGO_PORT        = int(os.environ['MONGO_PORT'])
-MONGO_HOST        = os.environ['MONGO_HOST']
-MONGO_USERNAME    = os.environ['MONGO_USERNAME']
-MONGO_PASSWORD    = os.environ['MONGO_PASSWORD']
-MONGO_AUTH_SOURCE = os.environ['MONGO_AUTH_SOURCE']
-MONGO_DBNAME      = os.environ['MONGO_DBNAME']
-
 ADMIN_USERNAME    = os.environ['ADMIN_USERNAME']
 ADMIN_PASSWORD    = os.environ['ADMIN_PASSWORD']
 
@@ -31,7 +24,16 @@ domain = {
     'profiles': profiles
 }
 
-settings =  {'DOMAIN': domain}
+settings =  {
+    'DOMAIN': domain,
+
+    'MONGO_PORT': int(os.environ['MONGO_PORT']),
+    'MONGO_HOST': os.environ['MONGO_HOST'],
+    'MONGO_USERNAME': os.environ['MONGO_USERNAME'],
+    'MONGO_PASSWORD': os.environ['MONGO_PASSWORD'],
+    'MONGO_AUTH_SOURCE': os.environ['MONGO_AUTH_SOURCE'],
+    'MONGO_DBNAME': os.environ['MONGO_DBNAME']
+}
 
 class RestAuth(BasicAuth):
 
