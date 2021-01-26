@@ -7,6 +7,9 @@ MONGO_PASSWORD    = os.environ['MONGO_PASSWORD']
 MONGO_AUTH_SOURCE = os.environ['MONGO_AUTH_SOURCE']
 MONGO_DBNAME      = os.environ['MONGO_DBNAME']
 
+ADMIN_USERNAME    = os.environ['ADMIN_USERNAME']
+ADMIN_PASSWORD    = os.environ['ADMIN_PASSWORD']
+
 profile_schema = {
     'username': { 'type': 'string' },
     'uuid': { 'type': 'string' }
